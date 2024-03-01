@@ -49,7 +49,7 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Card One</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus. <span id="more">Luctus auctor molestie litora pharetra semper magnis volutpat vivamus lectus. Molestie ridiculus, eleifend adipiscing nascetur lacinia curae; volutpat!</span></p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus. <span id="dots">. . .</span><span id="more">Luctus auctor molestie litora pharetra semper magnis volutpat vivamus lectus. Molestie ridiculus, eleifend adipiscing nascetur lacinia curae; volutpat!</span></p>
                         </div>
                         <div class="card-footer"><a onclick="myFunction()" id="myBtn" class="btn btn-primary btn-sm" href="#!">More Info</a></div>
                     </div>
@@ -85,10 +85,13 @@
             function myFunction(){
                 var moreText = document.getElementById("more")
                 var btntext = document.getElementById("myBtn")
-                if {
+                var dots = document.getElementById("dots")
+                if (dots.style.display === "none"){
+                    dots.style.display = "inline"
                     btntext.innerHTML = "Read More";
                     moreText.style.display = "none";
                 } else {
+                    dots.style.display = "none"
                     btntext.innerHTML = "Read Less";
                     moreText.style.display = "inline";
                 }
