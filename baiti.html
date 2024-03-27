@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body>       
+        <form id="forma">
+            Aprēķināt cik daudz informācijas var lejupladēt<br>
+            <input type="text" name="sek" onmouseenter="nul()">sekundēs, ja interneta ātrums ir 25 Mbps.
+            <p>Atbilde</p>
+            <input type="text" name="ans">
+            <input type="radio" id="kib" name="mervien" value="kib" onclick="ans.value=sek.value*3051.7578125;">
+            <label for="kib">KiB</label>
+            <input type="radio" id="kb" name="mervien" value="kb" onclick="ans.value=sek.value*3125;">
+            <label for="kb">KB</label>            
+        </form>
     </body>
+    <script>
+        function nul(){
+            document.getElementById("forma").reset()
+        }
+    </script>
 </html>
